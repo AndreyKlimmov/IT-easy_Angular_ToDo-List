@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Edit task: <b> {{ modalData.title }} </b></h1>
+<div mat-dialog-content>
+  <app-input [textControl]="formGroup.get('title')"></app-input>
+  <app-date-picker [control]="formGroup.get('deadlineDate')" [label]="'Deadline Date'"></app-date-picker>
+</div>
+<div mat-dialog-actions>
+  <app-button (click)="close()" [buttonText]="'Cancel'"></app-button>
+  <app-button (click)="formGroup.valid ? saveChanges() : null" [buttonText]="'Save'"></app-button>
+</div>

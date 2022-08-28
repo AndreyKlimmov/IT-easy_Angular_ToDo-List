@@ -1,0 +1,20 @@
+<mat-card [class.finished]="taskObj.isFinished" class="card">
+  <mat-slide-toggle
+    [checked]="taskObj.isFinished"
+    (change)="cardStatusChange()"
+
+  >
+  </mat-slide-toggle>
+  <h5 class="card__number">{{cardNumber}}</h5>
+  <h5 class="card__text">{{taskObj.title}}</h5>
+  <div class="card-date">
+    <h5 class="card__text">Date of creation: </h5>
+    <h5 class="card__text">{{taskObj.dateOfCreation | date: "dd.MM.YYYY"}}</h5>
+  </div>
+  <div class="card-date">
+    <h5 class="card__text">Deadline: </h5>
+    <h5 class="card__text">{{taskObj.deadlineDate | date: "dd.MM.YYYY"}}</h5>
+  </div>
+  <img (click)="editCard()" class="card__pencil" src="assets/icons/pencil.svg" alt="pencil icon">
+  <img (click)="deleteCard()" class="card__delete" src="assets/icons/cross.svg" alt="cross icon">
+</mat-card>

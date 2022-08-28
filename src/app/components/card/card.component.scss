@@ -1,0 +1,44 @@
+.card {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #34c0cd;
+  border: 1px solid #0095ec;
+  border-radius: 8px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.75);
+
+  &-date {
+    display: flex;
+    align-items: center;
+
+    & h5:first-child {
+      margin-right: 5px;
+    }
+  }
+
+  &__pencil {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    transform: scale(-1, 1);
+  }
+
+  &__delete {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &.finished {
+    background: rgba(93,94,104,0.74);
+
+    & .card__text {
+      text-decoration: line-through;
+    }
+  }
+
+}
+

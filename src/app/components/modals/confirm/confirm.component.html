@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Delete task</h1>
+<div mat-dialog-content>
+  Would you like to delete this task?
+</div>
+<div mat-dialog-actions>
+  <app-button (click)="close()" [buttonText]="'No'"></app-button>
+  <app-button (click)="confirm()" [buttonText]="'Ok'"></app-button>
+</div>

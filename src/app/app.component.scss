@@ -1,0 +1,9 @@
+.section {
+  width: 70%;
+  margin: 25px auto;
+
+  & app-card {
+    margin-bottom: 20px;
+    display: block;
+  }
+}

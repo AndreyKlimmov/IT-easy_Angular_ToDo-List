@@ -1,0 +1,45 @@
+.header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+  background: #34c0cd;
+
+  &__title {
+    padding-left: 15px;
+    font-family: normal;
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000000;
+  }
+
+  &-new-card {
+    margin-right: 15px;
+    padding: 12px 12px 4px 12px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.75);
+
+    &__text {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &-new-card-controls {
+    & app-input {
+      margin: 0 10px 0 25px;
+    }
+  }
+}
+
+.btn-group {
+  & app-button {
+    margin-right: 25px;
+  }
+}
