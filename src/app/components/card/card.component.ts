@@ -30,5 +30,4 @@ export class CardComponent implements OnInit {
   public deleteCard(): void {
     this.deleteCardEvent.emit()
   }
-
 }

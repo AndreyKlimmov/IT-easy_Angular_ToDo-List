@@ -4,8 +4,6 @@ import { ConfirmComponent } from './confirm.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {ButtonModule} from "../../button/button.module";
 
-
-
 @NgModule({
   declarations: [
     ConfirmComponent

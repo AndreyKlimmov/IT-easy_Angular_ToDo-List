@@ -1,14 +1,20 @@
 <div class="container">
-  <app-header (updateEvent)="handleUpdate($event)"></app-header>
+  <app-header
+    (updateEvent)="handleUpdate($event)"
+    (sortAllEvent)="sortAllCards()"
+    (sortActiveEvent)="sortActiveCards()"
+    (sortFinishedEvent)="sortFinishedCards()"
+  ></app-header>
   <div class="section">
-    <app-card
-      *ngFor="let task of taskList; index as i"
-      [taskObj]="task"
-      [cardNumber]="i + 1"
-      (changeCardStatus)="changeCardStatus(task)"
-      (deleteCardEvent)="deleteTask(task)"
-      (editCardEvent)="editTask(task)"
-    >
-    </app-card>
+      <app-card
+        *ngFor="let task of taskList; index as i"
+        [taskObj]="task"
+        [cardNumber]="i + 1"
+        (changeCardStatus)="changeCardStatus(task)"
+        (deleteCardEvent)="deleteTask(task)"
+        (editCardEvent)="editTask(task)"
+      >
+      </app-card>
   </div>
 </div>
+

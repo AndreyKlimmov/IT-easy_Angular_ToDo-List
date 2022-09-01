@@ -17,5 +17,4 @@ export class InputComponent implements OnInit {
   public resetControl() {
     this.textControl.reset('')
   }
-
 }

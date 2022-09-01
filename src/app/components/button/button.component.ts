@@ -10,9 +10,5 @@ export class ButtonComponent {
   @Input() buttonColor: any = '';
 
   constructor() {
-
-
   }
-
-
 }

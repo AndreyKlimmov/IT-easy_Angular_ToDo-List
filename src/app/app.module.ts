@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CardModule} from "./components/card/card.module";
 import {ConfirmModule} from "./components/modals/confirm/confirm.module";
 import {EditCardModule} from "./components/modals/edit-card/edit-card.module";
+import {SelectModule} from "./components/select/select.module";
 
 @NgModule({
   declarations: [

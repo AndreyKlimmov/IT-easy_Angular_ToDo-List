@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SelectComponent } from './select.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
-import {FormsModule} from "@angular/forms";
-
-
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
     declarations: [
@@ -14,11 +12,12 @@ import {FormsModule} from "@angular/forms";
     exports: [
         SelectComponent
     ],
-  imports: [
-    CommonModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        FormsModule,
+        ReactiveFormsModule
+    ]
 })
 export class SelectModule { }

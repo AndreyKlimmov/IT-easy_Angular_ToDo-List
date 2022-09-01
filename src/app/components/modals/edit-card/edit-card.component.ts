@@ -41,5 +41,4 @@ export class EditCardComponent implements OnInit {
       new FormControl(this.modalData.deadlineDate || ''),
       [Validators.required])
   }
-
 }

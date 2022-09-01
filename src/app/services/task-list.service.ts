@@ -15,7 +15,7 @@ export class TaskListService {
     },
     {
       isFinished: false,
-      id: 0,
+      id: 1,
       title: "first todo",
       dateOfCreation: new Date(),
       deadlineDate: new Date(),

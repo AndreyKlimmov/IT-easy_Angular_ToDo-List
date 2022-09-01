@@ -6,8 +6,6 @@ import {MatInputModule} from "@angular/material/input";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {ReactiveFormsModule} from "@angular/forms";
 
-
-
 @NgModule({
   declarations: [
     DatePickerComponent

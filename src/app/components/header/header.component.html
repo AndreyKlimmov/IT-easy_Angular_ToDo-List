@@ -1,9 +1,9 @@
 <div class="header">
   <h1 class="header__title">TO DO LIST</h1>
   <div class="btn-group">
-    <app-button [buttonText]="'ALL'"></app-button>
-    <app-button [buttonText]="'ACTIVE'"></app-button>
-    <app-button [buttonText]="'FINISHED'"></app-button>
+    <app-button (click)="sortAll()"[buttonText]="'ALL'"></app-button>
+    <app-button (click)="sortActive()"[buttonText]="'ACTIVE'"></app-button>
+    <app-button (click)="sortFinished()" [buttonText]="'FINISHED'"></app-button>
   </div>
   <app-select></app-select>
   <div class="header-new-card">
@@ -14,3 +14,7 @@
     </div>
   </div>
 </div>
+
+
+
+<!--(selectEvent)="selectFn($event)"-->

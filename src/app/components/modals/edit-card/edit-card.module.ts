@@ -7,22 +7,22 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {DatePickerModule} from "../../date-picker/date-picker.module";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
-
-
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     EditCardComponent
   ],
-  imports: [
-    CommonModule,
-    ButtonModule,
-    InputModule,
-    MatDialogModule,
-    DatePickerModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
+    imports: [
+        CommonModule,
+        ButtonModule,
+        InputModule,
+        MatDialogModule,
+        DatePickerModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatIconModule
+    ],
   providers: [
     MatDatepickerModule
   ]

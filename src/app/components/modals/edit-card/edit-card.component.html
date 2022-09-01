@@ -4,6 +4,9 @@
   <app-date-picker [control]="formGroup.get('deadlineDate')" [label]="'Deadline Date'"></app-date-picker>
 </div>
 <div mat-dialog-actions>
-  <app-button (click)="close()" [buttonText]="'Cancel'"></app-button>
-  <app-button (click)="formGroup.valid ? saveChanges() : null" [buttonText]="'Save'"></app-button>
+  <app-button class="app-btn" (click)="close()" [buttonText]="'Cancel'"></app-button>
+  <app-button class="app-btn" (click)="formGroup.valid ? saveChanges() : null" [buttonText]="'Save'"></app-button>
 </div>
+<button (click)="close()">
+  <mat-icon>close</mat-icon>
+</button>

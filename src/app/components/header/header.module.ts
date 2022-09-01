@@ -5,8 +5,6 @@ import {ButtonModule} from "../button/button.module";
 import {InputModule} from "../input/input.module";
 import {SelectModule} from "../select/select.module";
 
-
-
 @NgModule({
     declarations: [
         HeaderComponent
