@@ -1,5 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TaskListService} from "../../services/task-list.service";
+import {AppComponent} from "../../app.component";
 
 @Component({
   selector: 'app-select',
@@ -9,7 +10,6 @@ import {TaskListService} from "../../services/task-list.service";
 export class SelectComponent implements OnInit {
   public selectedValue: string = '';
 
-
   public tasks: { value: string, viewValue: string }[] = [
     {value: 'all-0', viewValue: 'All'},
     {value: 'name-1', viewValue: 'Sort by name'},
@@ -18,7 +18,7 @@ export class SelectComponent implements OnInit {
     {value: 'active-4', viewValue: 'Active'},
   ];
 
-  constructor(
+  constructor(public appComp: AppComponent
   ) {
 
   }
@@ -28,7 +28,7 @@ export class SelectComponent implements OnInit {
   }
 
   public selectFn(): void {
-    //this.taskListService.selectValue = this.selectedValue
-    //console.log('select', this.taskListService.selectValue);
+    this.appComp.selectSort(this.selectedValue)
+    this.selectedValue = this.appComp.select
   }
  }

@@ -14,10 +14,12 @@ export class AppComponent implements OnInit {
   title = 'IT-easy-HW8-Angular-ToDo-List';
   public taskList: AppInterface[] =[];
   public sortedTaskList: AppInterface[] =[];
+  public select: string = ''
 
   constructor(
     private taskListService: TaskListService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+
   ) {
   }
 
@@ -71,6 +73,35 @@ export class AppComponent implements OnInit {
     this.renderCards()
   }
 
+  sortNameCards() {
+    this.sortedTaskList = this.taskListService.getTaskList.sort(function (a, b) {
+      if (a.title > b.title) {
+        return 1;
+      }
+      if (a.title < b.title) {
+        return -1;
+      }
+      // a должно быть равным b
+      return 0;
+    });
+
+    this.renderCards()
+  }
+  sortDateCards() {
+    this.sortedTaskList = this.taskListService.getTaskList.sort(function (a, b) {
+      if (a.dateOfCreation > b.dateOfCreation) {
+        return 1;
+      }
+      if (a.dateOfCreation < b.dateOfCreation) {
+        return -1;
+      }
+      // a должно быть равным b
+      return 0;
+    });
+
+    this.renderCards()
+  }
+
   sortActiveCards() {
     this.sortedTaskList = this.taskListService.getTaskList.filter((el:AppInterface) => !el.isFinished )
     this.renderCards()
@@ -83,5 +114,14 @@ export class AppComponent implements OnInit {
 
   public renderCards(): void {
     this.taskList = this.sortedTaskList
+  }
+
+  public selectSort(value: string): void {
+    if (value === 'all-0') this.sortAllCards()
+    if (value === 'name-1') this.sortNameCards()
+    if (value === 'date-2') this.sortDateCards()
+    if (value === 'finished-3') this.sortFinishedCards()
+    if (value === 'active-4') this.sortActiveCards()
+    console.log(value);
   }
 }

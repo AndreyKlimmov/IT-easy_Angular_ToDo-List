@@ -5,7 +5,7 @@ import {AppInterface} from "../interfaces/app.interface";
   providedIn: 'root',
 })
 export class TaskListService {
-  private taskList: AppInterface[] = [
+   private taskList: AppInterface[] = [
     {
       isFinished: true,
       id: 0,
